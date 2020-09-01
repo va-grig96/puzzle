@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Пазл-1</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body {
+            background: url(img/bg.jpg);
+        }
+        table {
+            margin: auto auto 30px 35%;
+        }
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <table id="puzzle" width="346" height="346">
+        <tr>
+    		<td id="td1">1</td>
+    		<td id="td2">2</td>
+    		<td id="td3">3</td>
+    	</tr>
+    	<tr>
+    		<td id="td4">4</td>
+    		<td id="td5">5</td>
+    		<td id="td6">6</td>
+    	</tr>
+    	<tr>
+    		<td id="td7">7</td>
+    		<td id="td8">8</td>
+    		<td id="td9">9</td>
+    	</tr>
+    </table>
+    
+    <div id="imgs">
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img1">
+        	<img src="img\cpu\cpu_001.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img2">
+        	<img src="img\cpu\cpu_002.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img3">
+        	<img src="img\cpu\cpu_003.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img4">
+        	<img src="img\cpu\cpu_004.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img5">
+        	<img src="img\cpu\cpu_005.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img6">
+        	<img src="img\cpu\cpu_006.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img7">
+        	<img src="img\cpu\cpu_007.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img8">
+        	<img src="img\cpu\cpu_008.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img9">
+        	<img src="img\cpu\cpu_009.png">
+    	</div>
+    </div>
+
+    <div class="ans_res">
+        <input type="text" id="result" title='Впиши название' maxlength="20" disabled>
+        <button id="answer">ОК</button>
+    </div>
+
+	<script>
+        var n = 9;
+        var res;
+
+        // Проверка ответа
+        $('#answer').click(function() {          
+            res = $('#result').val();
+            if (res == 'процессор') {
+                $(this).css({background:'#0f0'});
+                $('#result').val('ОТЛИЧНО').prop('disabled',true);
+                //$('#score').html(scoreAll+10);
+            } else {
+                $(this).css({background:'#f00'});
+                $('#result').val(''); 
+            }
+        });
+    </script> 
+</body>
+</html>

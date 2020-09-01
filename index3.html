@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Пазл-3</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+    	body {
+            background: url(img/bg.jpg);
+        }
+        table {
+			margin: auto auto 30px 27%;
+		}
+    </style>
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/script.js"></script> 
+</head>
+<body>
+    <table id="puzzle" width="550" height="336">
+    	<tr>
+    		<td id="td1">1</td>
+    		<td id="td2">2</td>
+    		<td id="td3">3</td>
+    		<td id="td4">4</td>
+    		<td id="td5">5</td>
+    	</tr>
+    	<tr>
+    		<td id="td6">6</td>
+    		<td id="td7">7</td>
+    		<td id="td8">8</td>
+    		<td id="td9">9</td>
+    		<td id="td10">10</td>
+    	</tr>
+    	<tr>
+    		<td id="td11">11</td>
+    		<td id="td12">12</td>
+    		<td id="td13">13</td>
+    		<td id="td14">14</td>
+    		<td id="td15">15</td>
+    	</tr>
+    </table>
+ 
+    <div id="imgs">
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img1">
+        	<img src="img\disk\disk_001.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img2">
+        	<img src="img\disk\disk_002.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img3">
+        	<img src="img\disk\disk_003.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img4">
+        	<img src="img\disk\disk_004.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img5">
+        	<img src="img\disk\disk_005.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img6">
+        	<img src="img\disk\disk_006.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img7">
+        	<img src="img\disk\disk_007.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img8">
+        	<img src="img\disk\disk_008.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img9">
+        	<img src="img\disk\disk_009.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img10">
+        	<img src="img\disk\disk_010.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img11">
+        	<img src="img\disk\disk_011.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img12">
+        	<img src="img\disk\disk_012.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img13">
+        	<img src="img\disk\disk_013.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img14">
+        	<img src="img\disk\disk_014.png">
+    	</div>
+    	<div class="draggable ui-widget ui-corner-all ui-state-error" id="img15">
+        	<img src="img\disk\disk_015.png">
+    	</div>
+    </div>
+
+    <div class="ans_res">
+        <input type="text" id="result" title='Впиши название' maxlength="20" disabled>
+        <button id="answer">ОК</button>
+    </div>
+
+	<script>
+        var n = 15;
+        var res;
+
+        // Проверка ответа
+        $('#answer').click(function() {
+            res = $('#result').val();
+            if (res == 'жёсткий диск') {
+                $(this).css({background:'#0f0'});
+                $('#result').val('ОТЛИЧНО').prop('disabled',true);
+            } else {
+                $(this).css({background:'#f00'});
+                $('#result').val(''); 
+            }
+        });
+    </script> 
+</body>
+</html>
